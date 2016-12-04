@@ -4,9 +4,9 @@
   <subtitle>我只愿面朝大海，春暖花开。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="sanyuyu.xyz/"/>
+  <link href="https://sanyuyu.xyz/"/>
   <updated>2016-12-02T09:21:45.000Z</updated>
-  <id>sanyuyu.xyz/</id>
+  <id>https://sanyuyu.xyz/</id>
   
   <author>
     <name>三鱼鱼</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>你好，三鱼鱼！</title>
-    <link href="sanyuyu.xyz/2016/12/02/hello-hexo/"/>
-    <id>sanyuyu.xyz/2016/12/02/hello-hexo/</id>
+    <link href="https://sanyuyu.xyz/2016/12/02/hello-hexo/"/>
+    <id>https://sanyuyu.xyz/2016/12/02/hello-hexo/</id>
     <published>2016-12-02T09:20:18.000Z</published>
     <updated>2016-12-02T09:21:45.000Z</updated>
     
@@ -33,14 +33,14 @@
     </summary>
     
     
-      <category term="hexo" scheme="sanyuyu.xyz/tags/hexo/"/>
+      <category term="hexo" scheme="https://sanyuyu.xyz/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="sanyuyu.xyz/2016/12/02/hello-world/"/>
-    <id>sanyuyu.xyz/2016/12/02/hello-world/</id>
+    <link href="https://sanyuyu.xyz/2016/12/02/hello-world/"/>
+    <id>https://sanyuyu.xyz/2016/12/02/hello-world/</id>
     <published>2016-12-02T09:15:00.000Z</published>
     <updated>2016-12-02T09:15:00.000Z</updated>
     
