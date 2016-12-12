@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sanyuyu.xyz/"/>
-  <updated>2016-12-02T09:21:45.000Z</updated>
+  <updated>2016-12-12T13:20:24.000Z</updated>
   <id>https://sanyuyu.xyz/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hello</title>
+    <link href="https://sanyuyu.xyz/2016/12/12/hello/"/>
+    <id>https://sanyuyu.xyz/2016/12/12/hello/</id>
+    <published>2016-12-12T12:57:31.000Z</published>
+    <updated>2016-12-12T13:20:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>nihao dsd</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;nihao dsd&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="诗词" scheme="https://sanyuyu.xyz/tags/%E8%AF%97%E8%AF%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>你好，三鱼鱼！</title>
