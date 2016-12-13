@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sanyuyu.xyz/"/>
-  <updated>2016-12-12T13:20:24.000Z</updated>
+  <updated>2016-12-13T04:27:23.000Z</updated>
   <id>https://sanyuyu.xyz/</id>
   
   <author>
@@ -16,46 +16,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hello</title>
-    <link href="https://sanyuyu.xyz/2016/12/12/hello/"/>
-    <id>https://sanyuyu.xyz/2016/12/12/hello/</id>
-    <published>2016-12-12T12:57:31.000Z</published>
-    <updated>2016-12-12T13:20:24.000Z</updated>
+    <title>poem</title>
+    <link href="https://sanyuyu.xyz/2016/12/12/poem/"/>
+    <id>https://sanyuyu.xyz/2016/12/12/poem/</id>
+    <published>2016-12-12T13:24:24.000Z</published>
+    <updated>2016-12-13T04:27:23.000Z</updated>
     
-    <content type="html"><![CDATA[<p>nihao dsd</p>
+    <content type="html"><![CDATA[<p>#滕王阁序</p>
+<blockquote>
+<p>###作者：王勃 　　　　　　　　　　　　年代：唐朝</p>
+</blockquote>
+<p>　　豫章故郡，洪都新府。星分翼轸(zhěn)，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐孺下陈蕃之榻。雄州雾列，俊采星驰。台隍枕夷夏之交，宾主尽东南之美。都督阎公之雅望，棨(qǐ)戟(jǐ)遥临；宇文新州之懿(yì)范，襜(chān)帷(wéi)暂驻。十旬休假，胜友如云；千里逢迎，高朋满座。腾蛟起凤，孟学士之词宗；紫电青霜，王将军之武库。家君作宰，路出名区；童子何知，躬逢胜饯。</p>
+<p>　　时维九月，序属三秋。潦(lǎo)水尽而寒潭清，烟光凝而暮山紫。俨(yān)骖(cān)騑(fēi)于上路，访风景于崇阿(ē)。临帝子长洲，得天人之旧馆。层峦耸翠，上出重霄；飞阁流丹，下临无地。鹤(tīng)汀凫渚，穷岛屿之萦回；桂殿兰宫，即冈峦之体势。</p>
+<p>　　披绣闼(tà)，俯雕甍，山原旷其盈视，川泽与其骇瞩。闾阎扑地，钟鸣鼎食之家；舸舰迷津，青雀黄龙之舳。云霄雨菲，彩彻区明。落霞与孤鹜齐飞，秋水共长天一色。渔舟唱晚，响穷彭蠡之滨；雁阵惊寒，声断衡阳之浦。</p>
+<p>　　遥襟甫畅，逸兴遄飞。爽簌发而清风生，纤歌凝而白云遏。睢园绿竹，气凌彭泽之樽；邺水朱华，光照临川之笔。四美具，二难并。穷睇眄于中天，极娱游于暇日。天高地迥，觉宇宙之无穷；兴尽悲来，识盈虚之有数。望长安于日下，目吴会于云间。地势极而南溟深，天柱高而北辰远。关山难越，谁悲失路之人？萍水相逢，尽是他乡之客。怀帝阍而不见，奉宣室以何年？</p>
+<p>　　嗟乎！时运不齐，命途多舛。冯唐易老，李广难封。屈贾谊于长沙，非无圣主；窜梁鸿于海曲，岂乏明时？所赖君子见机，达人知命。老当益壮，宁移白首之心？穷且益坚，不坠青云之志。酌贪泉而觉爽，处涸辙以犹欢。北海虽赊，扶摇可接；东隅已逝，桑榆非晚。孟尝高洁，空余报国之情；阮籍猖狂，岂效穷途之哭！勃，三尺为名，一介书生。无路请缨，等终军之弱冠；有怀投笔，慕宗悫之长风。舍簪笏于百龄，奉晨昏于万里。非谢家之宝树，接孟氏之芳邻。他日趋庭，叨陪鲤对；今兹捧袂，喜托龙门；杨意不逢，扶凌云而自惜；钟期既遇，奏流水以何惭？</p>
+<p>　　呜呼！胜地不常，盛筵难再；兰亭已矣，梓泽丘墟。临别赠言，幸承恩于伟饯；登高作赋，是所望于群公。敢竭鄙怀，恭疏短引；一言均赋，四韵俱成。请洒潘江，各倾陆海云尔：</p>
+<pre><code>滕王高阁临江渚，佩玉鸣鸾罢歌舞。
+画栋朝飞南浦云，珠帘暮卷西山雨。
+闲云谭影日悠悠，物转星移几度秋。
+阁中帝子今何在？栏外长江空自流。
+</code></pre><p>  <img src="http://ww3.sinaimg.cn/large/006y8lVajw1fap1rie5qxj30dw0jzahr.jpg" alt="teng wang ge"></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;nihao dsd&lt;/p&gt;
-
+      &lt;p&gt;#滕王阁序&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;###作者：王勃 　　　　　　　　　　　　年代：唐朝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;　　豫章故郡，洪都新府。星分翼轸(zhěn)，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐
     
     </summary>
     
-    
-      <category term="诗词" scheme="https://sanyuyu.xyz/tags/%E8%AF%97%E8%AF%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你好，三鱼鱼！</title>
-    <link href="https://sanyuyu.xyz/2016/12/02/hello-hexo/"/>
-    <id>https://sanyuyu.xyz/2016/12/02/hello-hexo/</id>
-    <published>2016-12-02T09:20:18.000Z</published>
-    <updated>2016-12-02T09:21:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>这是我的第一篇博客，你好，Hexo。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这是我的第一篇博客，你好，Hexo。&lt;/p&gt;
-
-    
-    </summary>
+      <category term="诗词散记" scheme="https://sanyuyu.xyz/categories/%E8%AF%97%E8%AF%8D%E6%95%A3%E8%AE%B0/"/>
     
     
-      <category term="hexo" scheme="https://sanyuyu.xyz/tags/hexo/"/>
+      <category term="王勃" scheme="https://sanyuyu.xyz/tags/%E7%8E%8B%E5%8B%83/"/>
     
   </entry>
   
