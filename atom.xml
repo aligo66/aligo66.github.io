@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sanyuyu.xyz/"/>
-  <updated>2016-12-19T07:34:24.000Z</updated>
+  <updated>2016-12-19T07:37:13.000Z</updated>
   <id>https://sanyuyu.xyz/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://sanyuyu.xyz/2016/12/19/Emmet-for-sublime/"/>
     <id>https://sanyuyu.xyz/2016/12/19/Emmet-for-sublime/</id>
     <published>2016-12-19T03:24:58.000Z</published>
-    <updated>2016-12-19T07:34:24.000Z</updated>
+    <updated>2016-12-19T07:37:13.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Emmet的简单介绍"><a href="#Emmet的简单介绍" class="headerlink" title="Emmet的简单介绍"></a>Emmet的简单介绍</h1><p>一、<strong>快速编写HTML代码</strong></p>
 <p>1.初始化HTML文档需要包含一些固定的标签，比如<html>、<head>、</head><body>等，现在你只需要输入”!”或”html5”，然后按Tab键：可以迅速创建一个HTML结构</body></html></p>
@@ -44,7 +44,7 @@
 <p>tr：用于table、tbody、thead和tfoot中</p>
 <p>td：用于tr中</p>
 <p>option：用于select和optgroup中</p>
-<p>6.<strong>定义多个元素</strong> 要定义多个元素可以使用“<em>”符号。比如，ul&gt;li </em> 3可以生成如下代码</p>
+<p>6.<strong>定义多个元素</strong> 要定义多个元素可以使用<em>符号。比如，ul&gt;li</em>3可以生成如下代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;ul&gt;</div><div class="line"> &lt;li&gt;&lt;/li&gt;</div><div class="line"> &lt;li&gt;&lt;/li&gt;</div><div class="line"> &lt;li&gt;&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure>
 <p>7.<strong>定义多个带属性的元素</strong> 如果输入 ul&gt;li.item$*3，将会生成如下代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;ul&gt;</div><div class="line"> &lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;</div><div class="line"> &lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;</div><div class="line"> &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure>
