@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sanyuyu.xyz/"/>
-  <updated>2016-12-19T07:56:28.000Z</updated>
+  <updated>2016-12-21T15:48:42.000Z</updated>
   <id>https://sanyuyu.xyz/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://sanyuyu.xyz/2016/12/19/Emmet-for-sublime/"/>
     <id>https://sanyuyu.xyz/2016/12/19/Emmet-for-sublime/</id>
     <published>2016-12-19T03:24:58.000Z</published>
-    <updated>2016-12-19T07:56:28.000Z</updated>
+    <updated>2016-12-21T15:48:42.000Z</updated>
     
     <content type="html"><![CDATA[<p> Emmet的简单介绍</p>
 <h3 id="一、快速编写HTML代码"><a href="#一、快速编写HTML代码" class="headerlink" title="一、快速编写HTML代码"></a>一、<strong>快速编写HTML代码</strong></h3><p>1.初始化HTML文档需要包含一些固定的标签，比如<html>、<head>、</head><body>等，现在你只需要输入”!”或”html5”，然后按Tab键：可以迅速创建一个HTML结构</body></html></p>
@@ -59,7 +59,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">css代码</div><div class="line">overflow: hidden;</div></pre></td></tr></table></figure>
 <p>4.<strong>供应商前缀</strong> 如果输入非W3C标准的CSS属性，Emmet会自动加上供应商前缀，比如输入trs会生成</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">css代码</div><div class="line">-webkit-transform: ;</div><div class="line">-moz-transform: ;</div><div class="line">-ms-transform: ;</div><div class="line">-o-transform: ;</div><div class="line">transform: ;</div></pre></td></tr></table></figure>
-<h3 id="三、定制-你还可以定制Emmet插件："><a href="#三、定制-你还可以定制Emmet插件：" class="headerlink" title="三、定制 你还可以定制Emmet插件："></a>三、定制 你还可以定制Emmet插件：</h3><p>1.添加新缩写或更新现有缩写，可修改snippets.json文件</p>
+<h3 id="三、你还可以定制Emmet插件："><a href="#三、你还可以定制Emmet插件：" class="headerlink" title="三、你还可以定制Emmet插件："></a>三、你还可以定制Emmet插件：</h3><p>1.添加新缩写或更新现有缩写，可修改snippets.json文件</p>
 <p>2.更改Emmet过滤器和操作的行为，可修改preferences.json文件</p>
 <p>3.定义如何生成HTML或XML代码，可修改syntaxProfiles.json文件</p>
 ]]></content>
