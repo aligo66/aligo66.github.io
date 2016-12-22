@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sanyuyu.xyz/"/>
-  <updated>2016-12-21T15:48:42.000Z</updated>
+  <updated>2016-12-22T14:40:19.000Z</updated>
   <id>https://sanyuyu.xyz/</id>
   
   <author>
@@ -20,11 +20,12 @@
     <link href="https://sanyuyu.xyz/2016/12/19/Emmet-for-sublime/"/>
     <id>https://sanyuyu.xyz/2016/12/19/Emmet-for-sublime/</id>
     <published>2016-12-19T03:24:58.000Z</published>
-    <updated>2016-12-21T15:48:42.000Z</updated>
+    <updated>2016-12-22T14:40:19.000Z</updated>
     
     <content type="html"><![CDATA[<p> Emmet的简单介绍</p>
 <h3 id="一、快速编写HTML代码"><a href="#一、快速编写HTML代码" class="headerlink" title="一、快速编写HTML代码"></a>一、<strong>快速编写HTML代码</strong></h3><p>1.初始化HTML文档需要包含一些固定的标签，比如<html>、<head>、</head><body>等，现在你只需要输入”!”或”html5”，然后按Tab键：可以迅速创建一个HTML结构</body></html></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">	&lt;title&gt;Document&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>2.<strong>轻松添加class、id、文本和属性</strong> 连续输入元素名称的ID，Emmet会自动为你补全，比如输入p#foo会生成:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;p id=&quot;foo&gt;&lt;/p&gt;</div></pre></td></tr></table></figure>
 <p>连续输入类和id,比如p.bar#foo,会自动生成：</p>
@@ -33,7 +34,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;h1&gt;foo&lt;/h1&gt;</div><div class="line">&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;</div></pre></td></tr></table></figure>
 <p>3.<strong>嵌套</strong> 现在你只需要一行代码就可以实现标签的嵌套。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&gt;: 子元素符号， 表示嵌套的元素 p&gt;span  </div><div class="line">                          &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;p&gt;</div><div class="line"></div><div class="line">+: 同级标签符号 h1+h2       &lt;h1&gt;&lt;/h1&gt;</div><div class="line">                          &lt;h2&gt;&lt;/h2&gt;</div><div class="line"></div><div class="line">^:可以使该符号的标签提升一行 p&gt;span^p </div><div class="line">                        &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;</div><div class="line">                        &lt;p&gt;&lt;/p&gt;</div></pre></td></tr></table></figure>
-<a id="more"></a>
 <p>4.<strong>分组</strong>，你可以通过嵌套和括号来快速生成一些代码块，比如输入(.foo&gt;h1)+(.bar&gt;h2)会自动生成如下html代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;foo&quot;&gt;</div><div class="line">&lt;h1&gt;&lt;/h1&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;bar&quot;&gt;</div><div class="line">&lt;h2&gt;&lt;/h2&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 <p>5.<strong>隐式标签</strong> 声明一个带类的标签，只需要输入div.item,就会生成</p>
@@ -69,14 +69,6 @@
       &lt;p&gt; Emmet的简单介绍&lt;/p&gt;
 &lt;h3 id=&quot;一、快速编写HTML代码&quot;&gt;&lt;a href=&quot;#一、快速编写HTML代码&quot; class=&quot;headerlink&quot; title=&quot;一、快速编写HTML代码&quot;&gt;&lt;/a&gt;一、&lt;strong&gt;快速编写HTML代码&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;1.初始化HTML文档需要包含一些固定的标签，比如&lt;html&gt;、&lt;head&gt;、&lt;body&gt;等，现在你只需要输入”!”或”html5”，然后按Tab键：可以迅速创建一个HTML结构&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;head&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/head&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;body&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/body&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2.&lt;strong&gt;轻松添加class、id、文本和属性&lt;/strong&gt; 连续输入元素名称的ID，Emmet会自动为你补全，比如输入p#foo会生成:&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;p id=&amp;quot;foo&amp;gt;&amp;lt;/p&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;连续输入类和id,比如p.bar#foo,会自动生成：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;p class=&amp;quot;bar&amp;quot; id=&amp;quot;foo&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;下面来看看如何定义HTML元素的内容和属性。你可以通过输入h1{foo}和a[href=#],就可以自动生成如下代码&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;h1&amp;gt;foo&amp;lt;/h1&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;3.&lt;strong&gt;嵌套&lt;/strong&gt; 现在你只需要一行代码就可以实现标签的嵌套。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;gt;: 子元素符号， 表示嵌套的元素 p&amp;gt;span  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                          &amp;lt;p&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;p&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;+: 同级标签符号 h1+h2       &amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                          &amp;lt;h2&amp;gt;&amp;lt;/h2&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;^:可以使该符号的标签提升一行 p&amp;gt;span^p &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                        &amp;lt;p&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                        &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -92,10 +84,10 @@
     <link href="https://sanyuyu.xyz/2016/12/12/%E6%BB%95%E7%8E%8B%E9%98%81%E5%BA%8F/"/>
     <id>https://sanyuyu.xyz/2016/12/12/滕王阁序/</id>
     <published>2016-12-12T13:24:24.000Z</published>
-    <updated>2016-12-20T05:03:09.000Z</updated>
+    <updated>2016-12-22T14:39:47.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="滕王阁序"><a href="#滕王阁序" class="headerlink" title="滕王阁序"></a>滕王阁序</h1><h3 id="作者：王勃-年代：唐朝"><a href="#作者：王勃-年代：唐朝" class="headerlink" title="作者：王勃 　　　　　　　　　　　　年代：唐朝"></a>作者：王勃 　　　　　　　　　　　　年代：唐朝</h3><p><img src="http://ww3.sinaimg.cn/large/006y8lVajw1fap1rie5qxj30dw0jzahr.jpg" alt="teng wang ge"></p>
-<p>　　豫章故郡，洪都新府。星分翼轸(zhěn)，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐孺下陈蕃之榻。雄州雾列，俊采星驰。台隍枕夷夏之交，宾主尽东南之美。都督阎公之雅望，棨(qǐ)戟(jǐ)遥临；宇文新州之懿(yì)范，襜(chān)帷(wéi)暂驻。十旬休假，胜友如云；千里逢迎，高朋满座。腾蛟起凤，孟学士之词宗；紫电青霜，王将军之武库。家君作宰，路出名区；童子何知，躬逢胜饯。<br><a id="more"></a><br>　　时维九月，序属三秋。潦(lǎo)水尽而寒潭清，烟光凝而暮山紫。俨(yān)骖(cān)騑(fēi)于上路，访风景于崇阿(ē)。临帝子长洲，得天人之旧馆。层峦耸翠，上出重霄；飞阁流丹，下临无地。鹤汀(tīng)凫(fǔ)渚(zhǔ)，穷岛屿之萦(yíng)回；桂殿兰宫，即冈峦之体势。</p>
+<p>　　豫章故郡，洪都新府。星分翼轸(zhěn)，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，<br><a id="more"></a><br>徐孺下陈蕃之榻。雄州雾列，俊采星驰。台隍枕夷夏之交，宾主尽东南之美。都督阎公之雅望，棨(qǐ)戟(jǐ)遥临；宇文新州之懿(yì)范，襜(chān)帷(wéi)暂驻。十旬休假，胜友如云；千里逢迎，高朋满座。腾蛟起凤，孟学士之词宗；紫电青霜，王将军之武库。家君作宰，路出名区；童子何知，躬逢胜饯。<br>　　时维九月，序属三秋。潦(lǎo)水尽而寒潭清，烟光凝而暮山紫。俨(yān)骖(cān)騑(fēi)于上路，访风景于崇阿(ē)。临帝子长洲，得天人之旧馆。层峦耸翠，上出重霄；飞阁流丹，下临无地。鹤汀(tīng)凫(fǔ)渚(zhǔ)，穷岛屿之萦(yíng)回；桂殿兰宫，即冈峦之体势。</p>
 <p>　　披绣闼(tà)，俯雕甍(méng)，山原旷其盈视，川泽纡(yū)其骇瞩。闾(lǘ)阎(yán)扑地，钟鸣鼎食之家；舸(gě)舰迷津，青雀黄龙之舳(zhú)。云销雨霁(jì)，彩彻区明。落霞与孤鹜(wù)齐飞，秋水共长天一色。渔舟唱晚，响穷彭蠡(lǐ)之滨；雁阵惊寒，声断衡阳之浦。</p>
 <p>　　遥襟甫(fǔ)畅，逸兴遄(chuán)飞。爽簌发而清风生，纤歌凝而白云遏(è)。睢(suī)园绿竹，气凌彭泽之樽；邺(yè)水朱华，光照临川之笔。四美具，二难并。穷睇(dǐ)眄(miǎn)于中天，极娱游于暇日。天高地迥(jiǒng)，觉宇宙之无穷；兴尽悲来，识盈虚之有数。望长安于日下，目吴会(kuài)于云间。地势极而南溟(míng)深，天柱高而北辰远。关山难越，谁悲失路之人？萍水相逢，尽是他乡之客。怀帝阍(hūn)而不见，奉宣室以何年？</p>
 <p>　　嗟(jiē)乎！时运不齐，命途多舛(chuǎn)。冯唐易老，李广难封。屈贾谊(yì)于长沙，非无圣主；窜梁鸿于海曲，岂乏明时？所赖君子见机，达人知命。老当益壮，宁移白首之心？穷且益坚，不坠青云之志。酌贪泉而觉爽，处涸辙(hé)(zhé)以犹欢。北海虽赊(shē)，扶摇可接；东隅(yú)已逝，桑榆非晚。孟尝高洁，空余报国之情；阮籍猖狂，岂效穷途之哭！勃，三尺为名，一介书生。无路请缨，等终军之弱冠(guàn)；有怀投笔，慕宗悫(què)之长风。舍簪(zān)笏(hù)于百龄，奉晨昏于万里。非谢家之宝树，接孟氏之芳邻。他日趋庭，叨(tāo)陪鲤对；今兹捧袂，喜托龙门；杨意不逢，扶凌云而自惜；钟期既遇，奏流水以何惭？</p>
@@ -111,7 +103,7 @@
     <summary type="html">
     
       &lt;h1 id=&quot;滕王阁序&quot;&gt;&lt;a href=&quot;#滕王阁序&quot; class=&quot;headerlink&quot; title=&quot;滕王阁序&quot;&gt;&lt;/a&gt;滕王阁序&lt;/h1&gt;&lt;h3 id=&quot;作者：王勃-年代：唐朝&quot;&gt;&lt;a href=&quot;#作者：王勃-年代：唐朝&quot; class=&quot;headerlink&quot; title=&quot;作者：王勃 　　　　　　　　　　　　年代：唐朝&quot;&gt;&lt;/a&gt;作者：王勃 　　　　　　　　　　　　年代：唐朝&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/006y8lVajw1fap1rie5qxj30dw0jzahr.jpg&quot; alt=&quot;teng wang ge&quot;&gt;&lt;/p&gt;
-&lt;p&gt;　　豫章故郡，洪都新府。星分翼轸(zhěn)，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐孺下陈蕃之榻。雄州雾列，俊采星驰。台隍枕夷夏之交，宾主尽东南之美。都督阎公之雅望，棨(qǐ)戟(jǐ)遥临；宇文新州之懿(yì)范，襜(chān)帷(wéi)暂驻。十旬休假，胜友如云；千里逢迎，高朋满座。腾蛟起凤，孟学士之词宗；紫电青霜，王将军之武库。家君作宰，路出名区；童子何知，躬逢胜饯。&lt;br&gt;
+&lt;p&gt;　　豫章故郡，洪都新府。星分翼轸(zhěn)，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，&lt;br&gt;
     
     </summary>
     
