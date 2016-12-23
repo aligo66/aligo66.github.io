@@ -1595,24 +1595,27 @@ pre .javascript .function {
   margin-top: 0;
 }
 .site-author-image {
+  border-radius: 100%;
   display: block;
   margin: 0 auto;
   padding: 2px;
   max-width: 120px;
   height: auto;
-  border: 1px solid #eee;
+  border: 2px dashed #fff;
+  animation: cycle 2s 0.5s forwasrds;
+  transition: border-radius 2s;
 }
 .site-author-name {
   margin: 0;
   text-align: center;
-  color: #222;
+  color: #00bfff;
   font-weight: 600;
 }
 .site-description {
   margin-top: 0;
   text-align: center;
   font-size: 13px;
-  color: #999;
+  color: #00bfff;
 }
 .site-state {
   overflow: hidden;
@@ -1682,7 +1685,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff79ff;
+  background: #7d1fec;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2819,10 +2822,10 @@ body {
   clear: both;
 }
 .sidebar a {
-  color: #555;
+  color: #00bfff;
 }
 .sidebar a:hover {
-  color: #222;
+  color: #fc6423;
 }
 .links-of-author-item a:before {
   display: none;
