@@ -1603,8 +1603,8 @@ pre .javascript .function {
   max-width: 120px;
   height: auto;
   border: 2px dashed #fff;
-  animation: cycle 2s 0.5s forwasrds;
-  transition: border-radius 2s;
+  animation: cycle 2s 0.5s forwards !important;
+  transition: border-radius 2s !important;
 }
 .site-author-name {
   margin: 0;
@@ -1686,7 +1686,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff;
+  background: #8217cf;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2896,7 +2896,7 @@ body {
 .links-of-blogroll {
   margin-top: 20px;
   padding: 3px 0 0;
-  border-top: 1px dotted #ccc;
+  border-top: 1px dashed #ccc;
 }
 .links-of-blogroll-title {
   margin-top: 0;
