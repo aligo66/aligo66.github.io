@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sanyuyu.xyz/"/>
-  <updated>2017-03-09T08:00:26.000Z</updated>
+  <updated>2017-04-17T10:35:58.000Z</updated>
   <id>https://sanyuyu.xyz/</id>
   
   <author>
@@ -14,6 +14,88 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>css3 基础</title>
+    <link href="https://sanyuyu.xyz/2017/04/17/css3/"/>
+    <id>https://sanyuyu.xyz/2017/04/17/css3/</id>
+    <published>2017-04-17T08:18:06.000Z</published>
+    <updated>2017-04-17T10:35:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>##box-shadow<br>阴影类型：此参数可选。如不设值，默认投影方式是外阴影；如取其唯一值“inset”，其投影为内阴影；</p>
+<p>X-offset:阴影水平偏移量，其值可以是正负值。如果值为正值，则阴影在对象的右边，其值为负值时，阴影在对象的左边；</p>
+<p>Y-offset:阴影垂直偏移量，其值也可以是正负值。如果为正值，阴影在对象的底部，其值为负值时，阴影在对象的顶部；</p>
+<p>阴影模糊半径：此参数可选，，但其值只能是为正值，如果其值为0时，表示阴影不具有模糊效果，其值越大阴影的边缘就越模糊；</p>
+<p>阴影扩展半径：此参数可选，其值可以是正负值，如果值为正，则整个阴影都延展扩大，反之值为负值时，则缩小；</p>
+<p>阴影颜色：此参数可选。如不设定颜色，浏览器会取默认色，但各浏览器默认取色不一致，特别是在webkit内核下的safari和chrome浏览器下表现为透明色，在Firefox/Opera下表现为黑色（已验证），建议不要省略此参数。</p>
+<p>##CSS3 线性渐变<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">linegar-gradient (to bottom,#fff,#999);</div></pre></td></tr></table></figure></p>
+<p>##CSS3 text-shadow</p>
+<p>text-overflow 用来设置是否使用一个省略标记(…)标示对象内文本的溢出。<br>text-overflow:clip 标示剪切 | ellipsis 标示省略</p>
+<p>但是text-overflow只是用来说明文字溢出时用什么方式显示，要实现溢出时产生省略号的效果，还须定义强制文本在一行内显示(white-space:nowrap)及溢出内容为隐藏(overflow:hidden)，只有这样才能实现溢出文本显示省略号的效果，代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">text-overflow:ellipsis;</div><div class="line">overflow:hidden;</div><div class="line">white-space:nowrap;​</div></pre></td></tr></table></figure>
+<p>同时word-wrap也可以用来设置文本行为，当前行超过指定容器的边界时是否断开转行。<br>语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">world-wrap:normal表示控制连续文本换行 | break-word 表示内容将在边界内换行</div></pre></td></tr></table></figure>
+<p>##CSS3文字与字体 嵌入字体font-face<br>@font-face能够加载服务器端的字体文件，让浏览器可以显示用户电脑里没有安装的字体</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@font-face &#123;</div><div class="line">	font-family: 字体名称;</div><div class="line">	src : 字体文件在服务器上的相对或绝对路径</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>比如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">p&#123;</div><div class="line">	font-face : 12px;</div><div class="line">	font-family: &quot;My Font&quot;;</div><div class="line">	/*必须项，设置@font-face中font-family同样的值*/</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>##CSS3 文字与字体 文本阴影text-shadow<br>text-shadow 可以用来设置文本的阴影效果</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">text-shadow: X-Offset Y-offset blur color;</div></pre></td></tr></table></figure>
+<p>X-offset：表示阴影的水平偏移距离<br>Y-offset: 表示阴影的垂直偏移距离<br>Blur: 是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0;<br>color: 是指阴影的颜色，其可以使用 rgba色，<br>比如，我们可以用下面代码设置阴影效果。<br>text-shadow: 0 1px 1px #fff;</p>
+<p>##css3背景 background-origin<br>设置元素背景图片的原始起始位置。<br>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background-origin : border-box | padding-box | content-box;</div></pre></td></tr></table></figure>
+<p>参数分别表示背景图片是从边框还是内边框(默认值)，或者是内容区域开始显示。</p>
+<p>####<strong>css3背景 background-clip 图片剪切</strong></p>
+<p>###css3背景 background-size</p>
+<p>设置背景图片的大小，以长度值或百分比显示，还可以通过cover和contain来对图片进行伸缩<br>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background-size: auto |&lt;长度值&gt; |&lt;百分比&gt;|cover | contain</div></pre></td></tr></table></figure>
+<p>1.auto: 默认值，不改变背景图片的原始高度和宽度</p>
+<ol>
+<li>&lt;长度值&gt; : 成对出现如200px 50px 将背景图片宽高依次设置为前面两个值，当设置一个值时，将其作为图片宽度值来等比缩放；</li>
+<li>&lt;百分比&gt; 0%~100%之间的任何值，将背景图片一次设置为所在元素宽高乘以前面百分比得出的数值，当设置一个值时，同上，</li>
+<li>cover：覆盖，即将背景图片等比缩放至某一变紧贴容易边缘为止</li>
+<li>contain: 容纳，即将背景图片等比缩放某一边，紧贴容器边缘为止。<br>####css3多重背景</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">background:url(http://static.mukewang.com/static/img/logo_index.png) no-repeat</div><div class="line">    0 0 / 75% 55%, url(http://static.mukewang.com/static/img/logo_index.png) no-repeat right bottom / 50% 40%;</div></pre></td></tr></table></figure>
+<p>##css3实现立体导航栏</p>
+<p>效果<br><img src="http://ww3.sinaimg.cn/large/006tKfTcgy1feptmkwaqsj313o07g75c.jpg"><br>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">	&lt;title&gt;导航栏&lt;/title&gt;</div><div class="line">&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">	body &#123;</div><div class="line">		background: #ebebeb;</div><div class="line">	&#125;</div><div class="line">	.nav &#123;</div><div class="line">		width: 560px;</div><div class="line">		height: 50px;</div><div class="line">		line-height: 50px;</div><div class="line">		font-weight: bold;</div><div class="line">		margin: 40px auto 0;</div><div class="line">		font-family: Arial;</div><div class="line">		background: #f65f57;</div><div class="line">		border-radius: 5px;</div><div class="line">		box-shadow: 0 3px 5px #666;</div><div class="line">	&#125;</div><div class="line">	.nav li &#123;</div><div class="line">		position: relative;</div><div class="line">		display: inline-block;</div><div class="line">		list-style: none;</div><div class="line">		font-size: 13px;</div><div class="line">		text-shadow: 1px 2px 4px rgba(0,0,0,0.5);</div><div class="line">		list-style: none outside none;</div><div class="line">		padding: 0 16px;</div><div class="line">	&#125;</div><div class="line">	.nav a &#123;</div><div class="line">		display: inline-block;</div><div class="line">		-webkit-transition: all 0.2s ease-in;</div><div class="line">		-moz-transition: all 0.2s ease-in;</div><div class="line">		-o-transition: all 0.2s ease-in;</div><div class="line">		-ms-transition: all 0.2s ease-in;</div><div class="line">		transition: all 0.2s ease-in;</div><div class="line">	&#125;</div><div class="line">	.nav a:hover &#123;</div><div class="line">		-webkit-transform:rotate(20deg);</div><div class="line">		-ms-transform:rotate(20deg);</div><div class="line">		-o-transform:rotate(20deg);</div><div class="line">		-moz-transform:rotate(20deg);</div><div class="line">		transform:rotate(20deg);</div><div class="line">	&#125;</div><div class="line">/* 使用伪元素制作导航列表分割线*/</div><div class="line">	.nav li:before &#123;</div><div class="line">		content: &quot;&quot;;</div><div class="line">		color: #666;</div><div class="line">		position: absolute;</div><div class="line">		height: 20px;</div><div class="line">		width: 1px;</div><div class="line">		top: 15px;</div><div class="line">		left: -1px;</div><div class="line">		background-image: linear-gradient(to right, #f65f57,#993333,#f65f57);</div><div class="line">	&#125;</div><div class="line">/*删除第一项和最后一项当行分割线*/</div><div class="line"> .nav li:first-child::before &#123;</div><div class="line">	background-image: none;</div><div class="line"> &#125;</div><div class="line">.nav a, .nav a:hover &#123;</div><div class="line">	color: #fff;</div><div class="line">	text-decoration: none;</div><div class="line">&#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;ul class=&quot;nav&quot;&gt;</div><div class="line">		&lt;li&gt;&lt;a href=&quot;&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;</div><div class="line">		&lt;li&gt;&lt;a href=&quot;&quot;&gt;About Me&lt;/a&gt;&lt;/li&gt;</div><div class="line">		&lt;li&gt;&lt;a href=&quot;&quot;&gt;Protfolio&lt;/a&gt;&lt;/li&gt;</div><div class="line">		&lt;li&gt;&lt;a href=&quot;&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;</div><div class="line">		&lt;li&gt;&lt;a href=&quot;&quot;&gt;Resources&lt;/a&gt;&lt;/li&gt;</div><div class="line">		&lt;li&gt;&lt;a href=&quot;&quot;&gt;Contact Me&lt;/a&gt;&lt;/li&gt;</div><div class="line">	&lt;/ul&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>##CSS3选择器 属性选择器<br>在HTML中，通过各种各样的属性可以给元素增加很多附加的信息。例如，通过，ID属性可以将不同div元素进行区分。<br>实例展示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">html代码:</div><div class="line"></div><div class="line">&lt;a href=&quot;xxx.pdf&quot;&gt;我链接的是PDF文件&lt;/a&gt;</div><div class="line">&lt;a href=&quot;#&quot; class=&quot;icon&quot;&gt;我类名是icon&lt;/a&gt;</div><div class="line">&lt;a href=&quot;#“ title=”我的title是more“&gt;我的title是more&lt;/a&gt;</div><div class="line"></div><div class="line">css代码</div><div class="line">a[class^=icon] &#123;</div><div class="line">	background: green;</div><div class="line">	color:#fff;</div><div class="line">&#125;</div><div class="line">a[href$=pdf] &#123;</div><div class="line">	background: orange;</div><div class="line">	color:#fff;</div><div class="line">&#125;</div><div class="line">a[title*=more] &#123;</div><div class="line">	background: blue;</div><div class="line">	color: #fff;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>###CSS3结构伪类选择器 - not<br>div:not([id=”footer”]){<br>  background-color: orange;<br>}</p>
+<p>###CSS3 结构性伪类选择器—nth-child(n)<br>“:nth-child(n)”选择器用来定位某个父元素的一个或多个特定的子元素。其中“n”是其参数，而且可以是整数值(1,2,3,4)，也可以是表达式(2n+1、-n+5)和关键词(odd、even)，但参数n的起始值始终是1，而不是0。也就是说，参数n的值为0时，选择器将选择不到任何匹配的元素。</p>
+<h3 id="CSS3-结构性伪类选择器—nth-last-child-n"><a href="#CSS3-结构性伪类选择器—nth-last-child-n" class="headerlink" title="CSS3 结构性伪类选择器—nth-last-child(n)"></a>CSS3 结构性伪类选择器—nth-last-child(n)</h3><p>“:nth-last-child(n)”选择器和前面的“:nth-child(n)”选择器非常的相似，只是这里多了一个“last”，所起的作用和“:nth-child(n)”选择器有所区别，从某父元素的最后一个子元素开始计算，来选择特定的元素。</p>
+<h3 id="CSS3-first-of-type选择器"><a href="#CSS3-first-of-type选择器" class="headerlink" title="CSS3 first-of-type选择器"></a>CSS3 first-of-type选择器</h3><p>“:first-of-type”选择器类似于“:first-child”选择器，不同之处就是指定了元素的类型,其主要用来定位一个父元素下的某个类型的第一个子元素。</p>
+<h3 id="CSS3-nth-of-type-n-选择器"><a href="#CSS3-nth-of-type-n-选择器" class="headerlink" title="CSS3 nth-of-type(n)选择器"></a>CSS3 nth-of-type(n)选择器</h3><p>“:nth-of-type(n)”选择器和“:nth-child(n)”选择器非常类似，不同的是它只计算父元素中指定的某种类型的子元素。当某个元素中的子元素不单单是同一种类型的子元素时，使用“:nth-of-type(n)”选择器来定位于父元素中某种类型的子元素是非常方便和有用的。在“:nth-of-type(n)”选择器中的“n”和“:nth-child(n)”选择器中的“n”参数也一样，可以是具体的整数，也可以是表达式，还可以是关键词。</p>
+<h3 id="CSS3-only-child选择器"><a href="#CSS3-only-child选择器" class="headerlink" title="CSS3 only-child选择器"></a>CSS3 only-child选择器</h3><p>“:only-child”选择器选择的是父元素中只有一个子元素，而且只有唯一的一个子元素。也就是说，匹配的元素的父元素中仅有一个子元素，而且是一个唯一的子元素。</p>
+<h3 id="CSS3-only-of-type选择器"><a href="#CSS3-only-of-type选择器" class="headerlink" title="CSS3 only-of-type选择器"></a>CSS3 only-of-type选择器</h3><p>“:only-of-type”选择器用来选择一个元素是它的父元素的唯一一个相同类型的子元素。这样说或许不太好理解，换一种说法。“:only-of-type”是表示一个元素他有很多个子元素，而其中只有一种类型的子元素是唯一的，使用“:only-of-type”选择器就可以选中这个元素中的唯一一个类型子元素。</p>
+<p>###CSS3选择器下</p>
+<p>####CSS3选择器 :enabled选择器<br>在Web的表单中，有些表单元素有可用（“:enabled”）和不可用（“:disabled”）状态，比如输入框，密码框，复选框等。在默认情况之下，这些表单元素都处在可用状态。那么我们可以通过伪选择器“:enabled”对这些表单元素设置样式。</p>
+<p>示例演示</p>
+<p>通过“:enabled”选择器，修改文本输入框的边框为2像素的红色边框，并设置它的背景为灰色。</p>
+<p>####::selection<br>CSS3选择器 ::selection选择器<br>“::selection”伪元素是用来匹配突出显示的文本(用鼠标选择文本时的文本)。浏览器默认情况下，用鼠标选择网页文本是以“深蓝的背景，白色的字体”显示的，效果如下图所示：</p>
+<p>从上图中可以看出，用鼠标选中“专注IT、互联网技术”、“纯干货、学以致用”、“没错、这是免费的”这三行文本中，默认显示样式为：蓝色背景、白色文本。</p>
+<p>有的时候设计要求,不使用上图那种浏览器默认的突出文本效果，需要一个与众不同的效果，此时“::selection”伪元素就非常的实用。不过在Firefox浏览器还需要添加前缀。</p>
+<p>####CSS3选择器 :read-only选择器<br>“:read-only”伪类选择器用来指定处于只读状态元素的样式。简单点理解就是，元素中设置了“readonly=’readonly’”</p>
+<p>####CSS3选择器 :read-write选择器<br>“:read-write”选择器刚好与“:read-only”选择器相反，主要用来指定当元素处于非只读状态时的样式。</p>
+<p>###css3选择器 ::before 和 ::after<br>:before和::after这两个主要用来给元素的前面或后面插入内容，这两个常和”content”配合使用，使用的场景最多的就是清除浮动。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.clearfix::before,</div><div class="line">.clearfix::after &#123;</div><div class="line">    content: &quot;.&quot;;</div><div class="line">    display: block;</div><div class="line">    height: 0;</div><div class="line">    visibility: hidden;</div><div class="line">&#125;</div><div class="line">.clearfix:after &#123;clear: both;&#125;</div><div class="line">.clearfix &#123;zoom: 1;&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##box-shadow&lt;br&gt;阴影类型：此参数可选。如不设值，默认投影方式是外阴影；如取其唯一值“inset”，其投影为内阴影；&lt;/p&gt;
+&lt;p&gt;X-offset:阴影水平偏移量，其值可以是正负值。如果值为正值，则阴影在对象的右边，其值为负值时，阴影在对象的左边；&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="css3" scheme="https://sanyuyu.xyz/categories/css3/"/>
+    
+    
+      <category term="css3" scheme="https://sanyuyu.xyz/tags/css3/"/>
+    
+  </entry>
   
   <entry>
     <title>git分支</title>
