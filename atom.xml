@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sanyuyu.xyz/"/>
-  <updated>2017-04-18T08:05:27.000Z</updated>
+  <updated>2017-04-18T08:10:45.000Z</updated>
   <id>https://sanyuyu.xyz/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://sanyuyu.xyz/2017/04/18/queries/"/>
     <id>https://sanyuyu.xyz/2017/04/18/queries/</id>
     <published>2017-04-18T07:05:00.000Z</published>
-    <updated>2017-04-18T08:05:27.000Z</updated>
+    <updated>2017-04-18T08:10:45.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="media-queries-——媒体类型"><a href="#media-queries-——媒体类型" class="headerlink" title="media queries ——媒体类型"></a>media queries ——媒体类型</h2><p>　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
 　　</p>
@@ -28,10 +28,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;</div><div class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;print.css&quot; media=&quot;print&quot; /&gt;</div></pre></td></tr></table></figure>
 <a id="more"></a>
 <h3 id="import方法"><a href="#import方法" class="headerlink" title="@import方法"></a>@import方法</h3><p>@import可以引用样式文件，同样也可以引用媒体类型，@import引入媒体类型主要用两种方式，一种在样式中通过@import调用另一个样式文件，另一种方法是在<head></head>标签中的<style></style>中引入。<br>如样式文件中调用另一个样式文件时，就可以指定对应的媒体类型。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@import url(reset.css) screen;   </div><div class="line">@import url(print.css) print;</div><div class="line"></div><div class="line">```  </div><div class="line">在&lt;head&gt;中&lt;的style&gt;标签中引入媒体类型方法.</div></pre></td></tr></table></figure>
-<head><br><style type="text/css"><br>    @importurl(style.css) all;<br></style><br></head>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@media方法</div><div class="line">@media是CSS3中新引进的一个特性，被称为媒体查询。在页面中也可以通过这个属性来引入媒体类型。@media引入媒体类型和@import有点类似也具有两方式。</div><div class="line"></div><div class="line">1.在样式文件中引入媒体类型</div></pre></td></tr></table></figure>
+<p>@import url(reset.css) screen;<br>@import url(print.css) print;</p>
+<p>在<head>中&lt;的style&gt;标签中引入媒体类型方法.</head></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">    @importurl(style.css) all;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">``` </div><div class="line">@media方法</div><div class="line">@media是CSS3中新引进的一个特性，被称为媒体查询。在页面中也可以通过这个属性来引入媒体类型。@media引入媒体类型和@import有点类似也具有两方式。</div><div class="line"></div><div class="line">1.在样式文件中引入媒体类型</div></pre></td></tr></table></figure>
 <p>@media screen {<br>   选择器{/<em>你的样式代码写在这里…</em>/}<br>}</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2.使用@media引入媒体类型的方式是在head标签中的style中引用。</div></pre></td></tr></table></figure>
 <head><br><style type="text/css"><br>    @media screen{<br>    选择器{/<em>你的样式代码写在这里…</em>/}<br>}<br></style><br></head>
