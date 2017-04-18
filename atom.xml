@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sanyuyu.xyz/"/>
-  <updated>2017-04-18T08:10:45.000Z</updated>
+  <updated>2017-04-18T08:14:36.000Z</updated>
   <id>https://sanyuyu.xyz/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://sanyuyu.xyz/2017/04/18/queries/"/>
     <id>https://sanyuyu.xyz/2017/04/18/queries/</id>
     <published>2017-04-18T07:05:00.000Z</published>
-    <updated>2017-04-18T08:10:45.000Z</updated>
+    <updated>2017-04-18T08:14:36.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="media-queries-——媒体类型"><a href="#media-queries-——媒体类型" class="headerlink" title="media queries ——媒体类型"></a>media queries ——媒体类型</h2><p>　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
 　　</p>
@@ -30,9 +30,7 @@
 <h3 id="import方法"><a href="#import方法" class="headerlink" title="@import方法"></a>@import方法</h3><p>@import可以引用样式文件，同样也可以引用媒体类型，@import引入媒体类型主要用两种方式，一种在样式中通过@import调用另一个样式文件，另一种方法是在<head></head>标签中的<style></style>中引入。<br>如样式文件中调用另一个样式文件时，就可以指定对应的媒体类型。</p>
 <p>@import url(reset.css) screen;<br>@import url(print.css) print;</p>
 <p>在<head>中&lt;的style&gt;标签中引入媒体类型方法.</head></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">    @importurl(style.css) all;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">``` </div><div class="line">@media方法</div><div class="line">@media是CSS3中新引进的一个特性，被称为媒体查询。在页面中也可以通过这个属性来引入媒体类型。@media引入媒体类型和@import有点类似也具有两方式。</div><div class="line"></div><div class="line">1.在样式文件中引入媒体类型</div></pre></td></tr></table></figure>
-<p>@media screen {<br>   选择器{/<em>你的样式代码写在这里…</em>/}<br>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2.使用@media引入媒体类型的方式是在head标签中的style中引用。</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">    @importurl(style.css) all;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">``` </div><div class="line"></div><div class="line">@media方法</div><div class="line"></div><div class="line">@media是CSS3中新引进的一个特性，被称为媒体查询。在页面中也可以通过这个属性来引入媒体类型。@media引入媒体类型和@import有点类似也具有两方式。</div><div class="line"></div><div class="line">1.在样式文件中引入媒体类型</div><div class="line"></div><div class="line">@media screen &#123;</div><div class="line">   选择器&#123;/*你的样式代码写在这里…*/&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">2.使用@media引入媒体类型的方式是在head标签中的style中引用。</div></pre></td></tr></table></figure>
 <head><br><style type="text/css"><br>    @media screen{<br>    选择器{/<em>你的样式代码写在这里…</em>/}<br>}<br></style><br></head>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">### Media Queries 使用方法</div><div class="line">Media Queries能在不同的条件下使用不同的样式，使页面在不同在终端设备下达到不同的渲染效果。前面简单的介绍了Media Queries如何引用到项目中，但Media Queries有其自己的使用规则。具体来说,Media Queries的使用方法如下。</div></pre></td></tr></table></figure>
@@ -54,6 +52,13 @@
 
 <p>```<br>上面代码中style.css样式被用在宽度小于或等于480px的手持设备上，或者被用于屏幕宽度大于或等于960px的设备上。</p>
 <p>到目前为止，CSS3 Media Queries得到了众多浏览器支持，除了IE6-8浏览器不支持之外，在所有现代浏览器中都可以完美支持。还有一个与众不同的时，Media Queries在其他浏览器中不要像其他CSS3属性一样在不同的浏览器中添加前缀。</p>
+<h3 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h3><p>什么是响应式设计呢？维基百科是这样对响应式作的描述：“Responsive设计简单的称为RWD，是精心提供各种设备都能浏览网页的一种设计方法，RWD能让你的网页在不同的设备中展现不同的设计风格。”从这一点描述来说，RWD不是流体布局，也不是网格布局，而是一种独特的网页设计方法。</p>
+<p>响应式设计要考虑元素布局的秩序，而且还需要做到“有求必应”，那就需要满足以下三个条件：网站必须建立灵活的网格基础；引用到网站的图片必须是可伸缩的；不同的显示风格，需要在Media Queries上写不同的样式。</p>
+<p>要想灵活的使用Responsive，仅满足这几个条件还是不够的，我们必须对Responsive有一个全面的了解。</p>
+<h4 id="1-流体网络"><a href="#1-流体网络" class="headerlink" title="1.流体网络"></a>1.流体网络</h4><p>流体网格是一个简单的网格系统，这种网格设计参考了流体设计中的网格系统，将每个网格格子使用百分比单位来控制网格大小。这种网格系统最大的好处是让你的网格大小随时根据屏幕尺寸大小做出相对应的比例缩放。</p>
+<h4 id="2-弹性图片"><a href="#2-弹性图片" class="headerlink" title="2.弹性图片"></a>2.弹性图片</h4><p>弹性图片指的是不给图片设置固定尺寸，而是根据流体网格进行缩放，用于适应各种网格的尺寸。而实现方法是比较简单，一句代码就能搞定的事情。</p>
+<p>img {max-width:100%;}</p>
+<h4 id="3-媒体查询"><a href="#3-媒体查询" class="headerlink" title="3.媒体查询"></a>3.媒体查询</h4><p>媒体查询在CSS3中得到了强大的扩展。使用这个属性可以让你的设计根据用户终端设备适配对应的样式。这也是响应式设计中最为关键的。可以说Responsive设计离开了Medial Queries就失去了他生存的意义。简单的说媒体查询可以根据设备的尺寸，查询出适配的样式。Responsive设计最关注的就是：根据用户的使用设备的当前宽度，你的Web页面将加载一个备用的样式，实现特定的页面风格。</p>
 </linkrel="stylesheet"></linkrel="stylesheet">]]></content>
     
     <summary type="html">
