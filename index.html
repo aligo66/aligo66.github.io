@@ -402,29 +402,17 @@
 
       
         
-          
-            <p>##media queries ——媒体类型<br>　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
+          <h2 id="media-queries-——媒体类型"><a href="#media-queries-——媒体类型" class="headerlink" title="media queries ——媒体类型"></a>media queries ——媒体类型</h2><p>　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
 　　</p>
 <h3 id="link方法"><a href="#link方法" class="headerlink" title="link方法"></a>link方法</h3><p>link方法引入媒体类型其实就是在<link>标签引用样式的时候，通过link标签中的media属性来指定不同的媒体类型。如下所示。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;</div><div class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;print.css&quot; media=&quot;print&quot; /&gt;</div></pre></td></tr></table></figure>
-<h3 id="import方法"><a href="#import方法" class="headerlink" title="@import方法"></a>@import方法</h3><p>@import可以引用样式文件，同样也可以引用媒体类型，@import引入媒体类型主要用两种方式，一种在样式中通过@import调用另一个样式文件，另一种方法是在<head></head>标签中的<style></style>中引入。<br>如样式文件中调用另一个样式文件时，就可以指定对应的媒体类型。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@import url(reset.css) screen;   </div><div class="line">@import url(print.css) print;</div><div class="line"></div><div class="line">```  </div><div class="line">在head中的style标签中引入媒体类型方法.</div></pre></td></tr></table></figure>
-<head><br><style type="text/css"><br>    @importurl(style.css) all;<br></style><br></head>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@media方法</div><div class="line">@media是CSS3中新引进的一个特性，被称为媒体查询。在页面中也可以通过这个属性来引入媒体类型。@media引入媒体类型和@import有点类似也具有两方式。</div><div class="line"></div><div class="line">1.在样式文件中引入媒体类型</div></pre></td></tr></table></figure>
-<p>@media screen {<br>   选择器{/<em>你的样式代码写在这里…</em>/}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">2.使用@media引入媒体类型的方式是在head标签中的style中引用。</div></pre></td></tr></table></figure></p>
-<p><head></head></p>
-<p><style type="text/css"><br>    @media screen{<br>    选择器{/<em>你的样式代码写在这里…</em>/}<br>}<br></style><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">## Media Queries 使用方法</div><div class="line">Media Queries能在不同的条件下使用不同的样式，使页面在不同在终端设备下达到不同的渲染效果。前面简单的介绍了Media Queries如何引用到项目中，但Media Queries有其自己的使用规则。具体来说,Media Queries的使用方法如下。</div></pre></td></tr></table></figure></p>
-<p>@media 媒体类型and （媒体特性）{你的样式}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">注意：使用Media Queries必须要使用“@media”开头，然后指定媒体类型（也可以称为设备类型），随后是指定媒体特性（也可以称之为设备特性）。媒体特性的书写方式和样式的书写方式非常相似，主要分为两个部分，第一个部分指的是媒体特性，第二部分为媒体特性所指定的值，而且这两个部分之间使用冒号分隔。例如：</div></pre></td></tr></table></figure>
-<p>(max-width: 480px)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">从前面表中可以得知，主要有十种媒体类型和13种媒体特性，将其组合就类似于不同的CSS集合。但与CSS属性不同的是，媒体特性是通过min/max来表示大于等于或小于做为逻辑判断，而不是使用小于（&lt;）和大于（&gt;）这样的符号来判断。接下来一起来看看Media Queries在实际项目中常用的方式。</div><div class="line"></div><div class="line">### 1.最大宽度max-width</div><div class="line">&quot;max-width&quot;是媒体特性中最常用的一个特性，其意思是指媒体类型小于或等于指定的宽度时，样式生效。如:</div></pre></td></tr></table></figure></p>
-<p>@media screen and (max-width:480px) {<br>    .ads {<br>        display:none;<br>     }<br>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">上面表示的是，当屏幕小于或等于480px，页面中的广告区块(.ads)将都被隐藏。</div><div class="line"></div><div class="line">### 2.最小宽度 min-width</div><div class="line">&quot;min-width&quot;与&quot;max-width&quot;相反，指的是媒体类型大于或等于指定宽度时，样式生效。</div></pre></td></tr></table></figure>
-<p>@meida screen and (min-width:900px;) {<br>    .wrapper{width: 980px;}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">上面表示的是:当屏幕大于或等于900px时，容器&quot;.wrapper&quot;的宽度为980px;</div><div class="line"></div><div class="line"></div><div class="line">### 3.多个媒体特性使用</div><div class="line">Media Queries 可以使用关键词&quot;and&quot;将多个媒体特性结合在一起，也就是说，一个Media Query可以包含0到多个表达式，表达式又可以包含0到多个关键字，以及一种媒体类型。</div><div class="line">当屏幕在600px-900px之间时，body的背景色渲染为&quot;#f5f5f5&quot;，如下所示.</div></pre></td></tr></table></figure></p>
-<p>@media screen and (min-width:600px) and (max-width:900px;){<br>    body {background-color: #f5f5f5;}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">### 4.设备屏幕的输出宽度Device Width</div><div class="line">在智能设备上，例如iPhone、iPad等，还可以根据屏幕设备的尺寸来设置相应的样式（或者调用相应的样式文件）。同样的，对于屏幕设备同样可以使用“min/max”对应参数，如“min-device-width”或者“max-device-width”。</div></pre></td></tr></table></figure></p>
-<p><link rel="stylesheet" media="screen and (max-device-width:480px)" href="iphone.css"><br>```<br>上面的代码指的是</p>
-
-          
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/04/18/queries/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

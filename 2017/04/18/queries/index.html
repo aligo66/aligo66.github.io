@@ -86,25 +86,25 @@
 
 
 
-<meta name="description" content="##media queries ——媒体类型　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
+<meta name="description" content="media queries ——媒体类型　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
 　　
 link方法link方法引入媒体类型其实就是在标签引用样式的时候，通过link标签中的media属性来指定不同的媒体类型。如下所示。
-12&amp;lt;link rel=&amp;quot;s">
+12&amp;lt;link rel=&amp;quot;sty">
 <meta property="og:type" content="article">
 <meta property="og:title" content="media quires 媒体查询">
 <meta property="og:url" content="https://sanyuyu.xyz/2017/04/18/queries/index.html">
 <meta property="og:site_name" content="万庆的个人博客">
-<meta property="og:description" content="##media queries ——媒体类型　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
+<meta property="og:description" content="media queries ——媒体类型　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
 　　
 link方法link方法引入媒体类型其实就是在标签引用样式的时候，通过link标签中的media属性来指定不同的媒体类型。如下所示。
-12&amp;lt;link rel=&amp;quot;s">
-<meta property="og:updated_time" content="2017-04-18T07:34:12.000Z">
+12&amp;lt;link rel=&amp;quot;sty">
+<meta property="og:updated_time" content="2017-04-18T07:58:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="media quires 媒体查询">
-<meta name="twitter:description" content="##media queries ——媒体类型　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
+<meta name="twitter:description" content="media queries ——媒体类型　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
 　　
 link方法link方法引入媒体类型其实就是在标签引用样式的时候，通过link标签中的media属性来指定不同的媒体类型。如下所示。
-12&amp;lt;link rel=&amp;quot;s">
+12&amp;lt;link rel=&amp;quot;sty">
 
 
 
@@ -406,10 +406,11 @@ link方法link方法引入媒体类型其实就是在标签引用样式的时候
       
 
       
-        <p>##media queries ——媒体类型<br>　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
+        <h2 id="media-queries-——媒体类型"><a href="#media-queries-——媒体类型" class="headerlink" title="media queries ——媒体类型"></a>media queries ——媒体类型</h2><p>　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
 　　</p>
 <h3 id="link方法"><a href="#link方法" class="headerlink" title="link方法"></a>link方法</h3><p>link方法引入媒体类型其实就是在<link>标签引用样式的时候，通过link标签中的media属性来指定不同的媒体类型。如下所示。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;</div><div class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;print.css&quot; media=&quot;print&quot; /&gt;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="import方法"><a href="#import方法" class="headerlink" title="@import方法"></a>@import方法</h3><p>@import可以引用样式文件，同样也可以引用媒体类型，@import引入媒体类型主要用两种方式，一种在样式中通过@import调用另一个样式文件，另一种方法是在<head></head>标签中的<style></style>中引入。<br>如样式文件中调用另一个样式文件时，就可以指定对应的媒体类型。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@import url(reset.css) screen;   </div><div class="line">@import url(print.css) print;</div><div class="line"></div><div class="line">```  </div><div class="line">在head中的style标签中引入媒体类型方法.</div></pre></td></tr></table></figure>
 <head><br><style type="text/css"><br>    @importurl(style.css) all;<br></style><br></head>
@@ -425,7 +426,9 @@ link方法link方法引入媒体类型其实就是在标签引用样式的时候
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">上面表示的是，当屏幕小于或等于480px，页面中的广告区块(.ads)将都被隐藏。</div><div class="line"></div><div class="line">### 2.最小宽度 min-width</div><div class="line">&quot;min-width&quot;与&quot;max-width&quot;相反，指的是媒体类型大于或等于指定宽度时，样式生效。</div></pre></td></tr></table></figure>
 <p>@meida screen and (min-width:900px;) {<br>    .wrapper{width: 980px;}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">上面表示的是:当屏幕大于或等于900px时，容器&quot;.wrapper&quot;的宽度为980px;</div><div class="line"></div><div class="line"></div><div class="line">### 3.多个媒体特性使用</div><div class="line">Media Queries 可以使用关键词&quot;and&quot;将多个媒体特性结合在一起，也就是说，一个Media Query可以包含0到多个表达式，表达式又可以包含0到多个关键字，以及一种媒体类型。</div><div class="line">当屏幕在600px-900px之间时，body的背景色渲染为&quot;#f5f5f5&quot;，如下所示.</div></pre></td></tr></table></figure></p>
 <p>@media screen and (min-width:600px) and (max-width:900px;){<br>    body {background-color: #f5f5f5;}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">### 4.设备屏幕的输出宽度Device Width</div><div class="line">在智能设备上，例如iPhone、iPad等，还可以根据屏幕设备的尺寸来设置相应的样式（或者调用相应的样式文件）。同样的，对于屏幕设备同样可以使用“min/max”对应参数，如“min-device-width”或者“max-device-width”。</div></pre></td></tr></table></figure></p>
-<p><link rel="stylesheet" media="screen and (max-device-width:480px)" href="iphone.css"><br>```<br>上面的代码指的是</p>
+<p><link rel="stylesheet" media="screen and (max-device-width:480px)" href="iphone.css"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">上面的代码指的是“iphone.css”样式适用于最大设备宽度为480px，比如说iPhone上的显示，这里的“max-device-width”所指的是设备的实际分辨率，也就是指可视面积分辨率。</div><div class="line"></div><div class="line">### 5.not关键词</div><div class="line">使用关键词&quot;not&quot;是用来排除某种制定的媒体类型，也就是用来排除符合表达式的设备，换句话说，not关键词表示对后面的表达式执行取反操作，如:</div></pre></td></tr></table></figure></p>
+<p>@media not print and (max-width: 100px;){样式代码}</p>
+<p>```<br>上面代码表示的是：样式代码将被使用在除打印设备和宽度小于1200px下所有设备中。</p>
 
       
     </div>
@@ -668,7 +671,7 @@ link方法link方法引入媒体类型其实就是在标签引用样式的时候
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#link方法"><span class="nav-number">1.</span> <span class="nav-text">link方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#import方法"><span class="nav-number">2.</span> <span class="nav-text">@import方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#media-queries-——媒体类型"><span class="nav-number">1.</span> <span class="nav-text">media queries ——媒体类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#link方法"><span class="nav-number">1.1.</span> <span class="nav-text">link方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#import方法"><span class="nav-number">1.2.</span> <span class="nav-text">@import方法</span></a></li></ol></li></ol></div>
             
 
           </div>
