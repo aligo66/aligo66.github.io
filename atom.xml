@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sanyuyu.xyz/"/>
-  <updated>2017-04-18T08:57:03.000Z</updated>
+  <updated>2017-04-19T02:21:34.000Z</updated>
   <id>https://sanyuyu.xyz/</id>
   
   <author>
@@ -16,13 +16,85 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Ajax 学习</title>
+    <link href="https://sanyuyu.xyz/2017/04/18/study/"/>
+    <id>https://sanyuyu.xyz/2017/04/18/study/</id>
+    <published>2017-04-18T09:05:46.000Z</published>
+    <updated>2017-04-19T02:21:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Ajax-概念"><a href="#Ajax-概念" class="headerlink" title="Ajax 概念"></a>Ajax 概念</h2><p>ajax出现之前，都是同步的  </p>
+<p><img src="http://ww2.sinaimg.cn/large/006tKfTcgy1feqy8jgpo4j316u0msn1q.jpg"></p>
+<p><img src="http://ww4.sinaimg.cn/large/006tKfTcgy1feqy9m5xfcj316w0mwgof.jpg"></p>
+<p><img src="http://ww2.sinaimg.cn/large/006tKfTcgy1feqyb03inej316q0mu431.jpg"><br><a id="more"></a></p>
+<h3 id="基本过程"><a href="#基本过程" class="headerlink" title="基本过程"></a>基本过程</h3><p>1.运用HTML和CSS来实现页面<br>2.运用XMLHttpRequset和Web服务器进行数据的异步交换<br>3.运用JavaScript操作DOM,实现动态局部刷新</p>
+<h3 id="XMLHttpRequset"><a href="#XMLHttpRequset" class="headerlink" title="XMLHttpRequset"></a>XMLHttpRequset</h3><p>var request = new XMLHttpRquest();</p>
+<h3 id="概念介绍——HTTP请求"><a href="#概念介绍——HTTP请求" class="headerlink" title="概念介绍——HTTP请求"></a>概念介绍——HTTP请求</h3><p>一个完整的HTTP请求过程，通常有下面7个步骤:</p>
+<p>1.建立TCP连接</p>
+<p>2.浏览器向服务器发送请求</p>
+<p>3.浏览器发送请求头信息</p>
+<p>4.服务器应答</p>
+<p>5.服务器发送应答头信息</p>
+<p>6.服务器向浏览器发送数据</p>
+<p>7.服务器关闭TCP连接</p>
+<p>一个HTTP请求一般由四部分组成:</p>
+<p>1.HTTP请求的方法或动作，比如是GET或POST</p>
+<p>2.正在请求的URL，总得指导请求的地址是什么吧</p>
+<p>3.请求头，包含一些客户端环境信息，身份验证信息等</p>
+<p>4.请求体，也就是请求正文，请求正文中可以包含客户提交的查询字符串信息，表单信息等等<br><img src="http://ww2.sinaimg.cn/large/006tKfTcgy1feqypty5lgj316a0m044i.jpg"></p>
+<h4 id="get与post"><a href="#get与post" class="headerlink" title="get与post"></a>get与post</h4><p><strong>get</strong>: 　一般用于信息获取，默认Http请求方法，查询使用URL传递参数<br>　　　　   对所发送信息的数量也有限制，一般在2000个字符　　</p>
+<p><strong>post</strong>: 一般用于修改服务器上的资源<br>        对发送信息的数量无限制</p>
+<p><img src="http://ww3.sinaimg.cn/large/006tKfTcgy1feqz0ouz8bj312a0eewko.jpg"></p>
+<h4 style="text-align:center;">HTTP响应内容</h4>
+
+<p><img src="http://ww1.sinaimg.cn/large/006tKfTcgy1feqz21sfqtj313i0hutbh.jpg"></p>
+<p></p><h4 style="text-align:center;">HTTP状态码</h4><br><img src="http://ww3.sinaimg.cn/large/006tKfTcgy1feqz4iidpgj312i0fg7cz.jpg"><p></p>
+<h4 id="XMLHttpRquest请求"><a href="#XMLHttpRquest请求" class="headerlink" title="XMLHttpRquest请求"></a>XMLHttpRquest请求</h4><p><strong>open(method,url,async)</strong>    method请求方法 GET POST<br>URL, async表示请求是同步的还是异步的，一般我们使用ajax,使用异步请求,true,默认是tue,可以不填写<br><strong>send(string)</strong> GET 可以不填写 ，或者none</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">request.open(&quot;GET&quot;,get.php,true);</div><div class="line">request.send();</div><div class="line"></div><div class="line">request.open(&quot;POST&quot;,&quot;post.php&quot;,true);</div><div class="line">request.send();</div><div class="line"></div><div class="line">第三个有用</div><div class="line">request.open(&quot;POST&quot;,&quot;create.php&quot;,true);</div><div class="line">request.setRequsetHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);</div><div class="line">request.send(&quot;name=王二狗&amp;sex=男&quot;);</div></pre></td></tr></table></figure>
+<h3 id="XMLHttpRequset取得响应"><a href="#XMLHttpRequset取得响应" class="headerlink" title="XMLHttpRequset取得响应"></a>XMLHttpRequset取得响应</h3><p><img src="http://ww2.sinaimg.cn/large/006tKfTcgy1feqzm1klmgj315i0ky46v.jpg"></p>
+<p><strong>.readyState属性</strong> 请求状态</p>
+<p><strong>0:</strong>请求未初始化，open还没调用</p>
+<p><strong>1:</strong>服务器连接已建立，open已经调用了</p>
+<p><strong>2:</strong>请求已接收，也就是接收到头信息了</p>
+<p><strong>3:</strong>请求处理中，也就是接收到响应主体了</p>
+<p><strong>4:</strong>请求已完成，且响应已就绪，也就是响应完成了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var request = new XMLHttpRquest();</div><div class="line">request.open(&quot;GET&quot;,&quot;get.php&quot;,true);</div><div class="line">request.send();</div><div class="line">request.send();</div><div class="line">request.onreadystatechange = function()&#123;</div><div class="line">	if(request.readyState===4 &amp;&amp; request.status===200)&#123;</div><div class="line">		//做一些事情  request.responseText</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="php-兼容服务器"><a href="#php-兼容服务器" class="headerlink" title="php 兼容服务器"></a>php 兼容服务器</h4><p><strong>.PHP</strong>是一种创建动态交互性站点的服务器脚本语言</p>
+<p><strong>.PHP</strong>能够生成动态页面内容</p>
+<p><strong>.PHP</strong>能够创建、打开、读取、写入、删除以及关闭服务器上的文件</p>
+<p><strong>.PHP</strong>能够接收表单数据并处理</p>
+<p><strong>.PHP</strong>能够发送并取回cookies</p>
+<p><strong>.PHP</strong>能够添加、删除、修改数据库中的数据</p>
+<p><strong>.PHP</strong>能够限制用户访问某些网站的页面</p>
+<p><strong>…</strong></p>
+<h4 id="PHP测试页面"><a href="#PHP测试页面" class="headerlink" title="PHP测试页面"></a>PHP测试页面</h4><p><strong>.PHP</strong>脚本以&lt;?php开头,以?&gt;结尾</p>
+<p><strong>.PHP</strong>文件的默认文件扩展名是.php</p>
+<p><strong>.PHP</strong>语句以分号结尾(;)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Ajax-概念&quot;&gt;&lt;a href=&quot;#Ajax-概念&quot; class=&quot;headerlink&quot; title=&quot;Ajax 概念&quot;&gt;&lt;/a&gt;Ajax 概念&lt;/h2&gt;&lt;p&gt;ajax出现之前，都是同步的  &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/006tKfTcgy1feqy8jgpo4j316u0msn1q.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/006tKfTcgy1feqy9m5xfcj316w0mwgof.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/006tKfTcgy1feqyb03inej316q0mu431.jpg&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Web前端" scheme="https://sanyuyu.xyz/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="ajax" scheme="https://sanyuyu.xyz/tags/ajax/"/>
+    
+  </entry>
+  
+  <entry>
     <title>media quires 媒体查询</title>
     <link href="https://sanyuyu.xyz/2017/04/18/queries/"/>
     <id>https://sanyuyu.xyz/2017/04/18/queries/</id>
     <published>2017-04-18T07:05:00.000Z</published>
-    <updated>2017-04-18T08:57:03.000Z</updated>
+    <updated>2017-04-19T02:21:13.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="media-queries-——媒体类型"><a href="#media-queries-——媒体类型" class="headerlink" title="media queries ——媒体类型"></a>media queries ——媒体类型</h2><p>　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
+    <content type="html"><![CDATA[<h3 id="Media-queries-——媒体类型"><a href="#Media-queries-——媒体类型" class="headerlink" title="Media queries ——媒体类型"></a>Media queries ——媒体类型</h3><p>　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
 　　</p>
 <h3 id="link方法"><a href="#link方法" class="headerlink" title="link方法"></a>link方法</h3><p>link方法引入媒体类型其实就是在<link>标签引用样式的时候，通过link标签中的media属性来指定不同的媒体类型。如下所示。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;</div><div class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;print.css&quot; media=&quot;print&quot; /&gt;</div></pre></td></tr></table></figure>
@@ -93,7 +165,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;media-queries-——媒体类型&quot;&gt;&lt;a href=&quot;#media-queries-——媒体类型&quot; class=&quot;headerlink&quot; title=&quot;media queries ——媒体类型&quot;&gt;&lt;/a&gt;media queries ——媒体类型&lt;/h2&gt;&lt;p&gt;　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
+      &lt;h3 id=&quot;Media-queries-——媒体类型&quot;&gt;&lt;a href=&quot;#Media-queries-——媒体类型&quot; class=&quot;headerlink&quot; title=&quot;Media queries ——媒体类型&quot;&gt;&lt;/a&gt;Media queries ——媒体类型&lt;/h3&gt;&lt;p&gt;　　在实际媒体类型有近十种之多，实际之中常用的也就那么几种，不过媒体类型的引用方法也有很多种，常见的有: link标签、@import 和 CSS3新增的@media几种
 　　&lt;/p&gt;
 &lt;h3 id=&quot;link方法&quot;&gt;&lt;a href=&quot;#link方法&quot; class=&quot;headerlink&quot; title=&quot;link方法&quot;&gt;&lt;/a&gt;link方法&lt;/h3&gt;&lt;p&gt;link方法引入媒体类型其实就是在&lt;link&gt;标签引用样式的时候，通过link标签中的media属性来指定不同的媒体类型。如下所示。&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;style.css&amp;quot; media=&amp;quot;screen&amp;quot; /&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;print.css&amp;quot; media=&amp;quot;print&amp;quot; /&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
