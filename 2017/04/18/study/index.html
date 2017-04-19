@@ -100,7 +100,7 @@
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006tKfTcgy1feqz21sfqtj313i0hutbh.jpg">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/006tKfTcgy1feqz4iidpgj312i0fg7cz.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/006tKfTcgy1feqzm1klmgj315i0ky46v.jpg">
-<meta property="og:updated_time" content="2017-04-19T02:21:34.000Z">
+<meta property="og:updated_time" content="2017-04-19T07:17:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ajax 学习">
 <meta name="twitter:description" content="Ajax 概念ajax出现之前，都是同步的">
@@ -183,7 +183,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">我只愿面朝大海，春暖花开。</p>
+  <p class="site-subtitle">记录学习前端的知识和技巧</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -452,25 +452,47 @@
 <p></p><h4 style="text-align:center;">HTTP状态码</h4><br><img src="http://ww3.sinaimg.cn/large/006tKfTcgy1feqz4iidpgj312i0fg7cz.jpg"><p></p>
 <h4 id="XMLHttpRquest请求"><a href="#XMLHttpRquest请求" class="headerlink" title="XMLHttpRquest请求"></a>XMLHttpRquest请求</h4><p><strong>open(method,url,async)</strong>    method请求方法 GET POST<br>URL, async表示请求是同步的还是异步的，一般我们使用ajax,使用异步请求,true,默认是tue,可以不填写<br><strong>send(string)</strong> GET 可以不填写 ，或者none</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">request.open(&quot;GET&quot;,get.php,true);</div><div class="line">request.send();</div><div class="line"></div><div class="line">request.open(&quot;POST&quot;,&quot;post.php&quot;,true);</div><div class="line">request.send();</div><div class="line"></div><div class="line">第三个有用</div><div class="line">request.open(&quot;POST&quot;,&quot;create.php&quot;,true);</div><div class="line">request.setRequsetHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);</div><div class="line">request.send(&quot;name=王二狗&amp;sex=男&quot;);</div></pre></td></tr></table></figure>
-<h3 id="XMLHttpRequset取得响应"><a href="#XMLHttpRequset取得响应" class="headerlink" title="XMLHttpRequset取得响应"></a>XMLHttpRequset取得响应</h3><p><img src="http://ww2.sinaimg.cn/large/006tKfTcgy1feqzm1klmgj315i0ky46v.jpg"></p>
+<h3 style="text-align:center;">XMLHttpRequset取得响应</h3>
+
+<p><img src="http://ww2.sinaimg.cn/large/006tKfTcgy1feqzm1klmgj315i0ky46v.jpg"></p>
 <p><strong>.readyState属性</strong> 请求状态</p>
-<p><strong>0:</strong>请求未初始化，open还没调用</p>
-<p><strong>1:</strong>服务器连接已建立，open已经调用了</p>
-<p><strong>2:</strong>请求已接收，也就是接收到头信息了</p>
-<p><strong>3:</strong>请求处理中，也就是接收到响应主体了</p>
-<p><strong>4:</strong>请求已完成，且响应已就绪，也就是响应完成了。</p>
+<p><strong>0:</strong> 请求未初始化，open还没调用</p>
+<p><strong>1:</strong> 服务器连接已建立，open已经调用了</p>
+<p><strong>2:</strong> 请求已接收，也就是接收到头信息了</p>
+<p><strong>3:</strong> 请求处理中，也就是接收到响应主体了</p>
+<p><strong>4:</strong> 请求已完成，且响应已就绪，也就是响应完成了。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var request = new XMLHttpRquest();</div><div class="line">request.open(&quot;GET&quot;,&quot;get.php&quot;,true);</div><div class="line">request.send();</div><div class="line">request.send();</div><div class="line">request.onreadystatechange = function()&#123;</div><div class="line">	if(request.readyState===4 &amp;&amp; request.status===200)&#123;</div><div class="line">		//做一些事情  request.responseText</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="php-兼容服务器"><a href="#php-兼容服务器" class="headerlink" title="php 兼容服务器"></a>php 兼容服务器</h4><p><strong>.PHP</strong>是一种创建动态交互性站点的服务器脚本语言</p>
-<p><strong>.PHP</strong>能够生成动态页面内容</p>
-<p><strong>.PHP</strong>能够创建、打开、读取、写入、删除以及关闭服务器上的文件</p>
-<p><strong>.PHP</strong>能够接收表单数据并处理</p>
-<p><strong>.PHP</strong>能够发送并取回cookies</p>
-<p><strong>.PHP</strong>能够添加、删除、修改数据库中的数据</p>
-<p><strong>.PHP</strong>能够限制用户访问某些网站的页面</p>
+<p></p><h4 style="text-align:center;">php 兼容服务器</h4><br><strong>.PHP</strong> 是一种创建动态交互性站点的服务器脚本语言<p></p>
+<p><strong>.PHP</strong> 能够生成动态页面内容</p>
+<p><strong>.PHP</strong> 能够创建、打开、读取、写入、删除以及关闭服务器上的文件</p>
+<p><strong>.PHP</strong> 能够接收表单数据并处理</p>
+<p><strong>.PHP</strong> 能够发送并取回cookies</p>
+<p><strong>.PHP</strong> 能够添加、删除、修改数据库中的数据</p>
+<p><strong>.PHP</strong> 能够限制用户访问某些网站的页面</p>
 <p><strong>…</strong></p>
-<h4 id="PHP测试页面"><a href="#PHP测试页面" class="headerlink" title="PHP测试页面"></a>PHP测试页面</h4><p><strong>.PHP</strong>脚本以&lt;?php开头,以?&gt;结尾</p>
-<p><strong>.PHP</strong>文件的默认文件扩展名是.php</p>
-<p><strong>.PHP</strong>语句以分号结尾(;)</p>
+<h4 id="PHP测试页面"><a href="#PHP测试页面" class="headerlink" title="PHP测试页面"></a>PHP测试页面</h4><p><strong>.PHP</strong> 脚本以&lt;?php开头,以?&gt;结尾</p>
+<p><strong>.PHP</strong> 文件的默认文件扩展名是.php</p>
+<p><strong>.PHP</strong> 语句以分号结尾(;)</p>
+<p></p><h4 style="text-align:center;">JSON</h4><br><strong>.JSON:</strong> JavasScript对象表示法(JavaScript Object Notation)<p></p>
+<p><strong>.JSON</strong> 是存储和交换文本信息的语法，类似XML。它采用键值对的方式来组织，易于人们阅读和编写，同时也易于机器解析和生成</p>
+<p><strong>.JSON</strong> 是独立于语言的，也就是不管什么语言，都可以解析json,只需要按照json的规则来就行</p>
+<p></p><h5 style="text-align:center;">JSON与XML比较</h5><br><strong>.</strong> json的长度和xml格式比起来很短小<p></p>
+<p><strong>.</strong> json读写的速度更快</p>
+<p><strong>.</strong> json可以使用JavaScript内建的方法直接进行解析，转换成Javascript对象，非常方便</p>
+<p></p><h5 style="text-align:center;">JSON语法规则</h5><br><strong>.</strong> JSON数据的格式是：名称/值对  <p></p>
+<p>名称/值对组合的名称写在前面(在双引号中)，值对写在后面(同样在双引号中)，中间用冒号隔开：比如”name”:”郭靖”</p>
+<p><strong>.</strong>JSON的值可以使下面这些类型:</p>
+<p>数字(整数或浮点数)，比如123，1.23<br>字符串(在双引号中)<br>逻辑值(tue或false)<br>数组(在方括号中)<br>对象(在花括号中)<br>null</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	&quot;staff&quot;:[</div><div class="line">		&#123;&quot;name&quot;:&quot;洪七&quot;,&quot;age&quot;:70&#125;,</div><div class="line">		&#123;&quot;name&quot;:&quot;郭靖&quot;,&quot;age&quot;:35&#125;,</div><div class="line">		&#123;&quot;name&quot;:&quot;黄蓉&quot;,&quot;age&quot;:30&#125;</div><div class="line">	]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p></p><h5 style="text-align:center;">JSON解析</h5><br>1.eval和JSON.parse<br>2.在代码中使用eval是很危险的!特别是用它执行第三方的JSON数据(其中可能包含恶意代码时)，尽可能使用JSON.parse()方法解析字符串本身，该方法还可以捕获JSON中的语法错误。<br>两种方式<p></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var jsondata = &apos;&#123;&quot;staff&quot;:[&#123;&quot;name&quot;:&quot;洪七&quot;,&quot;age&quot;:70&#125;,&#123;&quot;name&quot;:&quot;郭靖&quot;,&quot;age&quot;:35&#125;,&#123;&quot;name&quot;:&quot;黄蓉&quot;,&quot;age&quot;:30&#125;]&#125;&apos;;</div><div class="line">var jsonobj = eval(&apos;(&apos;+ jsondata +&apos;)&apos;);</div><div class="line">alert(jsonobj.staff[0].name);</div><div class="line"></div><div class="line">var jsondata = &apos;&#123;&quot;staff&quot;:[&#123;&quot;name&quot;:&quot;洪七&quot;,&quot;age&quot;:70&#125;,&#123;&quot;name&quot;:&quot;郭靖&quot;,&quot;age&quot;:35&#125;,&#123;&quot;name&quot;:&quot;黄蓉&quot;,&quot;age&quot;:30&#125;]&#125;&apos;;</div><div class="line">var jsonobj = JSON.parse(jsondata);</div><div class="line">alert(jsonobj.staff[0].name);</div></pre></td></tr></table></figure>
+<p></p><h4 style="text-align:center;">用Jquery实现Ajax</h4><br><strong>.Jquery.ajax([settings])</strong><p></p>
+<p>.type: 类型，”POST”或”GET”,默认为”GET”</p>
+<p>. url: 发送请求的地址</p>
+<p>. data : 是一个对象，连同请求发送到服务器的数据</p>
+<p>.datatype:预期服务器返回的数据类型，如果不指定，Jquery将自动根据HTTP包MIME信息来只能判断，一般我们采用json格式，可以设置为”json”</p>
+<p>. success: 是一个方法，请求成功后的回调函数。传入返回后的数据，以及包含成功代码的字符串</p>
+<p>.error: 是一个方法，请求失败时调用此函数，传入XMLHttpRequest </p>
 
       
     </div>
@@ -602,7 +624,7 @@
                src="/images/avatar.png"
                alt="wanqing" />
           <p class="site-author-name" itemprop="name">wanqing</p>
-          <p class="site-description motion-element" itemprop="description">一个努力学习前端的菜鸟！</p>
+          <p class="site-description motion-element" itemprop="description">一个努力学习前端的🐟</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -713,7 +735,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax-概念"><span class="nav-number">1.</span> <span class="nav-text">Ajax 概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本过程"><span class="nav-number">1.1.</span> <span class="nav-text">基本过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XMLHttpRequset"><span class="nav-number">1.2.</span> <span class="nav-text">XMLHttpRequset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#概念介绍——HTTP请求"><span class="nav-number">1.3.</span> <span class="nav-text">概念介绍——HTTP请求</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#get与post"><span class="nav-number">1.3.1.</span> <span class="nav-text">get与post</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.2.</span> <span class="nav-text">HTTP响应内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.3.</span> <span class="nav-text">HTTP状态码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XMLHttpRquest请求"><span class="nav-number">1.3.4.</span> <span class="nav-text">XMLHttpRquest请求</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XMLHttpRequset取得响应"><span class="nav-number">1.4.</span> <span class="nav-text">XMLHttpRequset取得响应</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#php-兼容服务器"><span class="nav-number">1.4.1.</span> <span class="nav-text">php 兼容服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP测试页面"><span class="nav-number">1.4.2.</span> <span class="nav-text">PHP测试页面</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax-概念"><span class="nav-number">1.</span> <span class="nav-text">Ajax 概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本过程"><span class="nav-number">1.1.</span> <span class="nav-text">基本过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XMLHttpRequset"><span class="nav-number">1.2.</span> <span class="nav-text">XMLHttpRequset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#概念介绍——HTTP请求"><span class="nav-number">1.3.</span> <span class="nav-text">概念介绍——HTTP请求</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#get与post"><span class="nav-number">1.3.1.</span> <span class="nav-text">get与post</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.2.</span> <span class="nav-text">HTTP响应内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.3.</span> <span class="nav-text">HTTP状态码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XMLHttpRquest请求"><span class="nav-number">1.3.4.</span> <span class="nav-text">XMLHttpRquest请求</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.</span> <span class="nav-text">XMLHttpRequset取得响应</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.1.</span> <span class="nav-text">php 兼容服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PHP测试页面"><span class="nav-number">1.4.2.</span> <span class="nav-text">PHP测试页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.3.</span> <span class="nav-text">JSON</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">JSON与XML比较</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.3.2.</span> <span class="nav-text">JSON语法规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.3.3.</span> <span class="nav-text">JSON解析</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.4.4.</span> <span class="nav-text">用Jquery实现Ajax</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
